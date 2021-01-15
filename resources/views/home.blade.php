@@ -14,7 +14,7 @@
 			@foreach($songs as $song)
 			<div class="item">
 				<a href="/song/{{ $song->id }}">
-					<img src="{{ asset(Storage::url($song->img)) }}">
+					<img src="{{ $song->img }}">
 					<div class="desc">
 						<span data-id="{{ $song->id }}">
 							<i class="far fa-star"></i>

@@ -42,9 +42,6 @@ class ProfileController extends Controller
 
     public function uploadNewSong(UploadSongRequest $request) {
 
-        // header("Content-type: video/mp3");
-        // return Storage::disk('public')->get('songs/audio/2020/12/imHWeBYleulfQURiaifEOvnGujIEcfcnaiLqt7qr.mp3');
-
         DB::beginTransaction();
 
         try {
@@ -57,7 +54,7 @@ class ProfileController extends Controller
 
 
             $song = new Song();
-            $song->title = "Siaet moreee";
+            $song->title = "TestName";
             $song->publisher_id = \Auth::id();
             $song->audio_file = $audio;
             $song->img = $thumb;

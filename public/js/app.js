@@ -14,6 +14,8 @@ $(document).ready(() => {
 	$(".home_content .item span").on("click", function(e)  {
 		const songId = $(this).data("id");
 
+
+
 		fetch("/user/api/songs/favourites/create/" + songId)
 			.then(response = response.json())
 			.then(response => {
@@ -22,6 +24,8 @@ $(document).ready(() => {
 			.catch((error) => {
 				alert(error)
 			})
+
+			debugger;
 
 		e.preventDefault();
 		return false;
